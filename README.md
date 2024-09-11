@@ -41,7 +41,7 @@ const {useState} = React;
 const BaseExample = () => {
     const [height, setHeight] = useState(0);
     const ref = useResize((el) => {
-        console.log('容器大小发生改变');
+        console.log('容器大小发生改变', el);
     });
     return <div className="container" ref={ref}>
         <div style={{
@@ -61,7 +61,8 @@ render(<BaseExample/>);
 
 ### API
 
-| 属性名 | 说明 | 类型 | 默认值 |
-|-----|----|----|-----|
-|     |    |    |     |
+| 属性名      | 说明                                                           | 类型              | 默认值                              |
+|----------|--------------------------------------------------------------|-----------------|----------------------------------|
+| callback | 回调函数，返回ref                                                   | () => ReactNode |                                  |
+| options  | 选填参数，isDebounce是否使用防抖函数，否则使用节流，在 time 毫秒内最多执行 callback 一次的函数 | object          | { time: 500, isDebounce: false } |
 
