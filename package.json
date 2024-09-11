@@ -1,6 +1,6 @@
 {
   "name": "@kne/use-resize",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "当ref容器size发生变化时触发callback的react hooks",
   "syntax": {
     "esmodules": true
