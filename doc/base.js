@@ -5,7 +5,7 @@ const {useState} = React;
 const BaseExample = () => {
     const [height, setHeight] = useState(0);
     const ref = useResize((el) => {
-        console.log('容器大小发生改变');
+        console.log('容器大小发生改变', el);
     });
     return <div className="container" ref={ref}>
         <div style={{
